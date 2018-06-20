@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
         android:id="@+id/id_tv"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_gravity="top|left"
         android:background="@color/colorAccent"
         android:padding="15dp"
-        android:text="被监听者" />
+        android:onClick="getNestedScrollView"
+        android:text="被监听者"
+        />
 
-    <TextView
+    <Button
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="top|right"
+        android:layout_gravity="bottom|right"
         android:background="@color/colorPrimary"
-        android:clickable="true"
-        android:onClick="getNestedScrollView"
         android:padding="15dp"
+        app:layout_behavior="com.behaviordemo.app.CustomBehavior"
         android:text="监听者"
-        app:layout_behavior="com.behavaiordemo.app.CustomBehavior" />
+         />
 
 
-</android.support.constraint.ConstraintLayout>
+</android.support.design.widget.CoordinatorLayout>
